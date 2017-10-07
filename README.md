@@ -1,2 +1,3 @@
 # yaf_init
 this is yaf application init...
+## yaf框架初始化
