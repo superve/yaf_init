@@ -6,15 +6,16 @@ class IndexController extends Yaf_Controller_Abstract
 {
     public function init()
     {
-    	echo 'init call....';
-    	echo "<hr/>";
+        echo 'init call...';
     }
+
 
     public function indexAction()
     {
+        dd($this->getRequest()->getParams());
         $title = 'hi yaf!!!';
-        $this->getView()->assign('title', $title);
-    	
+       $this->getView()->assign('title', $title);
+    	// $this->getResponse()->setRedirect('http://www.baidu.com');
     }
 
     public function testAction()

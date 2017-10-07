@@ -6,12 +6,20 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
     public function _initBootstrap(){
         $this->_config = Yaf_Application::app()->getConfig();
         #Yaf_Registry::set("spam",new System_Spam());
-        
+
+    }
+    public function _initConfig(){
+        $config = new Yaf_Config_Ini(APPLICATION_COINFIG_FILE);
+        Yaf_Registry::set("config", $config);
     }
 
-    public function _initConfig(){
-    	$config = new Yaf_Config_Ini(APPLICATION_COINFIG_FILE);
-        Yaf_Registry::set("config", $config);
+
+    public function _initDefineRouter()
+    {
+        $router = Yaf_Dispatcher::getInstance()->getRouter();
+        $router->addConfig( Yaf_Registry::get('config')->route->routes );
+
+
     }
 
     public function _initCommonFunctions(){
