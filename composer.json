@@ -1,0 +1,14 @@
+{
+    "name": "gogery/yaf",
+    "description": "this is yaf application init....",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gogery",
+            "email": "gogery@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
