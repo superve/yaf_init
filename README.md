@@ -1,6 +1,7 @@
 # yaf_init
 this is yaf application init...
 
+
 ## yaf框架目录结构
 ```html
 application
